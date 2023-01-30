@@ -1,0 +1,32 @@
+.content {
+  //background: no-repeat url('../img/bg-content.png') $navi;
+  background-repeat: no-repeat;
+  background-color: $navi;
+  background-size: cover;
+  background-position-x: center;
+  min-height: 920px;
+  color: $white;
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 121px;
+    @media (max-width: 768px) {
+      padding: 20px;
+    }
+  }
+  &__title {
+    font-weight: 800;
+    font-size: 36px;
+    line-height: 43px;
+    text-transform: uppercase;
+  }
+  &__description {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: $gray;
+  }
+}

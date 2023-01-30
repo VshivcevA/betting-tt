@@ -1,0 +1,36 @@
+.nav {
+  font-weight: 700;//600 в google небыло
+  font-size: 13px;
+  line-height: 16px;
+  text-transform: uppercase;
+  &__list{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 60px;
+    list-style-type: none;
+    //padding-bottom: 20px;
+    @media (max-width: 768px) {
+      gap: 10px;
+      padding-bottom: 20px;
+    }
+    @media (max-width: 340px) {
+      flex-direction: column;
+    }
+  }
+  &__item{
+    height: 100%;
+    & a {
+      text-decoration: none;
+      color:$white;
+      height: 100%;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    &--current a {
+      color: $blue;
+    }
+
+  }
+}

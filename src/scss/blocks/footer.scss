@@ -1,0 +1,64 @@
+@import "../global/variables";
+.footer {
+  color:$white;
+  background-color: $navi-gray;
+  &__wrapper {
+    min-height: 80px;
+    display: flex;
+    justify-content:space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: center;
+    padding: 0 20px;
+    @media (max-width: 920px) {
+      flex-direction: column;
+      padding: 20px;
+    }
+    & ul{
+      padding-left:10px;
+      border-left: 1px solid $gray;
+      @media (max-width: 1201px) {
+        border-left: none;
+      }
+    }
+  }
+  & ul {
+    & li{
+      display: flex;
+      align-items: center;
+      & span,
+      & a {
+        padding-left: 10px;
+        text-decoration: none;
+        color: $white;
+      }
+    }
+  }
+
+  &__copyright {
+    flex-grow: 1;
+    padding-right: 10px;
+  }
+  &__payments {
+    padding-right: 10px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    gap: 38px;
+  }
+  &__contacts {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-self: center;
+    padding: 0;
+    flex-grow: 1;
+    gap: 38px;
+    & a {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

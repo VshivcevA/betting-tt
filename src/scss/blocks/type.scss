@@ -1,0 +1,58 @@
+@import "../global/variables";
+.type {
+  position: relative;
+  cursor: pointer;
+  color: $navi-gray;
+  width: 100%;
+
+  &__label {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 4px;
+    box-sizing: border-box;
+    &--open {
+      color: $white;
+      background-color: $navi-gray !important;
+      border: 1px solid $navi-gray !important;
+    }
+    &__title {
+      width: 100%;
+    }
+    & input {
+      display: none;
+    }
+    & svg {
+      &__arrow-rotate180 {
+        transform: rotate(180deg);
+      }
+    }
+
+  }
+  &__list {
+    position:absolute;
+    display: flex;
+    flex-direction: column;
+    top: 30px;
+    left:0;
+    width: 100%;
+    list-style: none;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 0 0 4px 4px;
+    padding:0;
+    box-sizing: border-box;
+    background-color: $navi;
+    overflow-y: scroll;
+    height: 150px;
+    border: 1px solid $navi-gray
+  }
+  &__item {
+    padding:8px 20px;
+    cursor: pointer;
+    color: $white;
+    &:hover {
+      color: $blue;
+    }
+  }
+}
