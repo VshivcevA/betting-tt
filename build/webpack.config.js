@@ -20,8 +20,8 @@ module.exports = {
   output: {
     filename: `${PATHS.assets}js/[name].js`,
     path: PATHS.dist,
-    // publicPath: "/", //dev
-    publicPath: "./", //prod
+    publicPath: "/", //dev
+    // publicPath: "./", //prod
 
   },
   module: {
@@ -31,6 +31,24 @@ module.exports = {
         loader: 'babel-loader',
         exclude: /node_modules/,
       },
+      // {
+      //   test: /\.(png|jpg|gif|svg)$/i,
+      //   use: [
+      //     {
+      //       loader: 'url-loader',
+      //       options: {
+      //         limit: false,
+      //       },
+      //     },
+      //   ],
+      // },
+      // {
+      //   test: /\.(png|jpg|gif|svg)$/,
+      //   loader: 'file-loader',
+      //   options: {
+      //     name: '[name].[ext]'
+      //   }
+      // },
       {
         test: /\.(jpe?g|png|gif|svg)$/i,
         type: "asset",
@@ -42,15 +60,18 @@ module.exports = {
           MiniCssExtractPlugin.loader,
           {
             loader: "css-loader",
+            // options: {sourceMap: true}
           }, {
             loader: "postcss-loader",
             options: {
+              // sourceMap: true,
               'postcssOptions': {
                 config: `${PATHS.src}/js/postcss.config.js`
               },
               },
           }, {
             loader: "sass-loader",
+            // options: {sourceMap: true}
           }
         ],
       }, {
@@ -99,10 +120,13 @@ module.exports = {
       minimizer: {
         implementation: ImageMinimizerPlugin.imageminMinify,
         options: {
+          // Lossless optimization with custom option
+          // Feel free to experiment with options for better result for you
           plugins: [
             ["gifsicle", { interlaced: true }],
             ["jpegtran", { progressive: true }],
-            ["optipng", { optimizationLevel: 5 }],
+            ["optipng", { optimizationLevel: 1 }],
+            // Svgo configuration here https://github.com/svg/svgo#configuration
             [
               "svgo",
               {
