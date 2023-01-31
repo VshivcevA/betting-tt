@@ -14,51 +14,45 @@
       flex-direction: column;
       padding: 20px;
     }
-    & ul{
-      padding-left:10px;
-      border-left: 1px solid $gray;
-      @media (max-width: 1201px) {
-        border-left: none;
+  }
+  &__payments,
+  &__contacts {
+    padding-left:10px;
+    border-left: 1px solid $gray-light;
+  }
+  &__list{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    flex-grow: 1;
+    gap: 38px;
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    &--text,
+    &--link {
+      padding-left: 10px;
+      color: $white;
+    }
+    &--link {
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
       }
     }
   }
-  & ul {
-    & li{
-      display: flex;
-      align-items: center;
-      & span,
-      & a {
-        padding-left: 10px;
-        text-decoration: none;
-        color: $white;
-      }
-    }
+  @media (max-width: 1199px) {
+    border-left: none;
   }
-
   &__copyright {
     flex-grow: 1;
     padding-right: 10px;
   }
   &__payments {
     padding-right: 10px;
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    flex-grow: 1;
-    gap: 38px;
   }
   &__contacts {
-    list-style: none;
-    display: flex;
     justify-content: flex-end;
-    align-self: center;
-    padding: 0;
-    flex-grow: 1;
-    gap: 38px;
-    & a {
-      &:hover {
-        text-decoration: underline;
-      }
-    }
   }
 }

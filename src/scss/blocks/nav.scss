@@ -1,5 +1,5 @@
 .nav {
-  font-weight: 700;//600 в google небыло
+  font-weight: 700;
   font-size: 13px;
   line-height: 16px;
   text-transform: uppercase;
@@ -9,7 +9,6 @@
     display: flex;
     gap: 60px;
     list-style-type: none;
-    //padding-bottom: 20px;
     @media (max-width: 768px) {
       gap: 10px;
       padding-bottom: 20px;
@@ -20,17 +19,17 @@
   }
   &__item{
     height: 100%;
-    & a {
-      text-decoration: none;
-      color:$white;
-      height: 100%;
-      &:hover {
-        text-decoration: underline;
-      }
-    }
-    &--current a {
+  }
+  &__link {
+    text-decoration: none;
+    color:$white;
+    height: 100%;
+    &--current {
       color: $blue;
     }
-
+    &:hover {
+      text-decoration: underline;
+    }
   }
+
 }

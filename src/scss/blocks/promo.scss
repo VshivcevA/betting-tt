@@ -1,5 +1,6 @@
 .promo {
   padding-top: 80px;
+  color: $black;
   //background: no-repeat url('../img/bg-promo.jpg') center;
   background-position: center;
   background-repeat: no-repeat;
@@ -24,50 +25,57 @@
     font-size: 48px;
     line-height: 58px;
     text-transform: uppercase;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    text-shadow: $shadow;
     @media (max-width: 768px) {
       font-size:20px;
       line-height: 28px;
     }
+    &--color-block {
+      color:$blue;
+    }
+  }
+  &__advantages {
+    margin-bottom: 50px;
+    @media (max-width: 768px) {
+      margin-bottom: 20px;
+    }
   }
   &__buttons {
-    margin-top: 50px;
     margin-bottom: 180px;
     display:flex;
     gap:30px;
-    max-width: 320px;
-
     @media (max-width: 768px) {
-      margin-top: 20px;
+      margin-bottom: 40px;
       flex-direction: column;
       gap: 10px;
-      align-self: center;
+      align-items: center;
     }
-    & button {
-      border-radius: 4px;
-      padding: 15px 10px;
-      min-width:183px;
-      font-style: normal;
-      font-weight: 400;
-      font-size: 13px;
-      line-height: 16px;
-      text-transform: uppercase;
-      &:hover {
-        transition: all 0.1s ease-in-out;
-        box-shadow: 2px 2px 4px grey;
-      }
-      @media (max-width: 768px) {
-        padding:10px;
-      }
-    }
-    &--buy {
-      color:$white;
-      background: $blue;
-      border: 1px solid $white;
-    }
-    &--more {
-      background: $white;
-      border: 1px solid #6F6D7B;
-    }
+    //&--buy,
+    //&--more, {
+    //  border-radius: 4px;
+    //  padding: 15px 10px;
+    //  min-width:183px;
+    //  font-style: normal;
+    //  font-weight: 400;
+    //  font-size: 13px;
+    //  line-height: 16px;
+    //  text-transform: uppercase;
+    //  &:hover {
+    //    transition: all 0.1s ease-in-out;
+    //    box-shadow: $shadow;
+    //  }
+    //  @media (max-width: 768px) {
+    //    padding:10px;
+    //  }
+    //}
+    //&--buy {
+    //  color:$white;
+    //  background: $blue;
+    //  border: 1px solid $white;
+    //}
+    //&--more {
+    //  background: $white;
+    //  border: 1px solid $gray-light;
+    //}
   }
 }

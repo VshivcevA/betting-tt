@@ -22,11 +22,15 @@
     font-size: 36px;
     line-height: 43px;
     text-transform: uppercase;
+    &--color-block {
+      color:$blue;
+    }
   }
   &__description {
     font-weight: 400;
     font-size: 18px;
     line-height: 22px;
-    color: $gray;
+    color: $gray-light;
+    margin-bottom: 80px;
   }
 }

@@ -1,10 +1,10 @@
 .logo {
-  font-family: 'Raleway';
+  font-family: 'Raleway',sans-serif;
   font-weight: 800;
   font-size: 28px;
   line-height: 33px;
   text-transform: uppercase;
-  &__tail {
+  &--color-block {
     color:$blue
   }
 }

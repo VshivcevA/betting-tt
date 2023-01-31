@@ -1,5 +1,6 @@
 .form {
   &__container {
+    //padding:20px;
     display: grid;
     grid-template-columns: repeat(3,370px);
     grid-template-rows: 0.5fr 1fr 1fr;
@@ -14,49 +15,49 @@
       flex-direction: column;
       padding-bottom: 50px;
     }
-    & .type__label,
-    & .form__file div,
-    & select,
-    & input {
-      width: 100%;
-      height: 48px;
-      background: $gray;
-      border: 1px solid #FFFFFF;
-      border-radius: 3px;
-      padding: 10px;
-      box-sizing: border-box;
-      font-weight: 400;
-      font-size: 18px;
-      line-height: 22px;
-      min-width: 280px;
-    }
   }
-  &__submit {
-    grid-area: submit;
-    color:$white;
-    background: $blue !important;//знаю что так лучше не делать
+  //&__select,
+  &__input {
+    width: 100%;
+    height: 48px;
+    background: $white-opacity085;
     border: 1px solid $white;
-    border-radius: 4px;
-    &:hover {
-      transition: all 0.1s ease-in-out;
-      box-shadow: 2px 2px 4px grey;
+    border-radius: 3px;
+    padding: 10px;
+    box-sizing: border-box;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    min-width: 280px;
+    &--submit {
+    //  padding: 15px 10px;
+      grid-area: submit;
+    //  color:$white;
+    //  background: $blue;
+    //  border: 1px solid $white;
+    //  border-radius: 4px;
+    //  &:hover {
+    //    transition: all 0.1s ease-in-out;
+    //    box-shadow: $shadow;
+    //  }
     }
   }
   &__range {
     grid-area: range;
-    & input {
+    &-input {
       background:none;
       border: none;
       padding: 0;
+      width: 100%;
       &::-webkit-slider-thumb,
       &::-moz-range-thumb{
-        background: $blue;
+        background: $blue-light;
         border: 3px solid $blue-dark;
         border-radius: 50%
       }
       &::-webkit-slider-runnable-track,
       &::-moz-range-track {
-        background: $gray;
+        background: $white-opacity07;
         border: 1px solid $white;
         border-radius:3px;
       }
@@ -67,17 +68,21 @@
       font-weight: 400;
       font-size: 18px;
       line-height: 22px;
-      @media (max-width: 920px) {
+      @media (max-width: 1199px) {
         font-size: 12px;
       }
     }
   }
   &__file {
     grid-area: file;
-    & input {
+    &:hover {
+      transition: all 0.1s ease-in-out;
+      box-shadow: $shadow;
+    }
+    &--input {
       display: none;
     }
-    & div {
+    &--text {
       font-weight: 600;
       font-size: 15px;
       line-height: 18px;
@@ -85,13 +90,10 @@
       display: flex;
       justify-content:center;
       color:$navi;
-      &:hover {
-        transition: all 0.1s ease-in-out;
-        box-shadow: 2px 2px 4px grey;
-      }
-      & svg {
-        padding-right: 10px;
-      }
+      align-items: center;
+    }
+    &--icon {
+      padding-right: 10px;
     }
   }
   &__type {
