@@ -1,11 +1,8 @@
-//buttons__promo--buy
 .buttons {
   &__promo {
     border-radius: 4px;
     padding: 15px 10px;
     min-width:183px;
-    font-style: normal;
-    font-weight: 400;
     font-size: 13px;
     line-height: 16px;
     text-transform: uppercase;
@@ -27,12 +24,16 @@
     }
   }
   &__form--submit {
+    width: 370px;
     padding: 15px 10px;
-    //grid-area: submit;
+    grid-area: submit;
     color:$white;
     background: $blue;
     border: 1px solid $white;
     border-radius: 4px;
+    @media (max-width: 1199px) {
+      width: 100%;
+    }
     &:hover {
       transition: all 0.1s ease-in-out;
       box-shadow: $shadow;

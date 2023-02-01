@@ -26,6 +26,9 @@
     list-style: none;
     flex-grow: 1;
     gap: 38px;
+    @media (max-width: 1199px) {
+      border-left: none;
+    }
   }
   &__item {
     display: flex;
@@ -34,6 +37,7 @@
     &--link {
       padding-left: 10px;
       color: $white;
+
     }
     &--link {
       text-decoration: none;
@@ -41,9 +45,6 @@
         text-decoration: underline;
       }
     }
-  }
-  @media (max-width: 1199px) {
-    border-left: none;
   }
   &__copyright {
     flex-grow: 1;

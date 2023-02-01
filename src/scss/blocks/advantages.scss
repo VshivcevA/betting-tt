@@ -4,9 +4,6 @@
     margin-top: 20px
   }
   &__title {
-    font-family: 'Lato', sans-serif;
-    font-style: normal;
-    font-weight: 700;
     font-size: 20px;
     line-height: 24px;
     margin-bottom:10px;
@@ -22,9 +19,6 @@
     }
   }
   &__item {
-    font-family: 'Lato',sans-serif;
-    font-style: normal;
-    font-weight: 400;
     font-size: 20px;
     line-height: 24px;
     @media (max-width: 320px) {
@@ -32,8 +26,6 @@
     }
     &:before {
       content:'\2012';
-      top: 0;
-      left: -3px;
     }
   }
 }

@@ -15,10 +15,7 @@
       left: 165px;
       width: 110px;
       height: 6px;
-      //background: url("./assets/img/dots.svg") no-repeat center;
-      background-repeat: no-repeat;
-      background-position: center;
-      background-image: url("../img/dots.svg");
+      background: url("../img/dots.svg") no-repeat center;
       @media (max-width: 1199px) {
         display: none;
       }

@@ -1,10 +1,7 @@
 .content {
-  //background: no-repeat url('../img/bg-content.png') $navi;
-  background-repeat: no-repeat;
-  background-color: $navi;
+  background: no-repeat url("../img/bg-content.png") center $navi;
+  //background-image: url('../img/bg-content.png');
   background-size: cover;
-  background-position-x: center;
-  min-height: 920px;
   color: $white;
   &__wrapper {
     display: flex;

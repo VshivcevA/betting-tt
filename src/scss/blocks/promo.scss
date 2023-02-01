@@ -1,9 +1,7 @@
 .promo {
   padding-top: 80px;
   color: $black;
-  //background: no-repeat url('../img/bg-promo.jpg') center;
-  background-position: center;
-  background-repeat: no-repeat;
+  background: no-repeat url('../img/bg-promo.jpg') center;
   background-size: cover;
   @media (max-width: 768px) {
     background-position: 75%;
