@@ -1,10 +1,15 @@
 const {merge} = require('webpack-merge')
 const baseWebpackConfig = require('./webpack.config')
 const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
+const { SquooshPlugin } = require("squoosh-webpack-plugin");
 
 const buildWebpackConfig = merge(baseWebpackConfig, {
   mode: 'production',
   plugins: [
+    new SquooshPlugin({
+      include: /\.(jpeg|jpg)$/,
+      outDir: 'docs/assets/img/',
+    }),
     new ImageMinimizerPlugin({
       minimizer: {
         implementation: ImageMinimizerPlugin.imageminMinify,
