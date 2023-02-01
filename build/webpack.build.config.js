@@ -12,7 +12,7 @@ const buildWebpackConfig = merge(baseWebpackConfig, {
           plugins: [
             ["gifsicle", { interlaced: true }],
             ["jpegtran", { progressive: true }],
-            ["optipng", { optimizationLevel: 99 }],
+            ["optipng", { optimizationLevel: 0 }],
             [
               "svgo",
               {
