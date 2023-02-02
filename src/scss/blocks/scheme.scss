@@ -8,7 +8,7 @@
     @media (max-width: 1199px) {
       flex-direction: column;
     }
-    & .scheme__item:not(:last-child) > .scheme__icon:after{
+    & .scheme__item:not(:last-child):after{
       position: absolute;
       content: "";
       top: 50px;
