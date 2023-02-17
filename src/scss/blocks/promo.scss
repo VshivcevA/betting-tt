@@ -3,9 +3,13 @@
   color: $black;
   background: no-repeat url('../img/bg-promo.jpg') center;
   background-size: cover;
+  padding-bottom: 180px;
+
   @media (max-width: 768px) {
     background-position: 75%;
     padding-top: 110px;
+    padding-bottom: 40px;
+
   }
   @media (max-width: 340px) {
     padding-top: 180px;
@@ -29,9 +33,12 @@
       font-size:20px;
       line-height: 28px;
     }
-    &--color-block {
-      color:$blue;
+    &-text {
+      &--color-block {
+        color:$blue;
+      }
     }
+
   }
   &__advantages {
     margin-bottom: 50px;
@@ -40,11 +47,9 @@
     }
   }
   &__buttons {
-    margin-bottom: 180px;
     display:flex;
     gap:30px;
     @media (max-width: 768px) {
-      margin-bottom: 40px;
       flex-direction: column;
       gap: 10px;
       align-items: center;

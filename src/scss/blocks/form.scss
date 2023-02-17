@@ -1,20 +1,22 @@
 .form {
   &__container {
-    display: flex;
+    //display: flex;
     flex-wrap: wrap;
+    border:none;
     justify-content: center;
     max-width: 1200px;
     margin-bottom: 150px;
-    //padding:20px;
-    //display: grid;
-    //grid-template-columns: repeat(3,370px);
-    //grid-template-rows: 0.5fr 1fr 1fr;
+    padding:0;
+    display: grid;
+    grid-template-columns: repeat(3,370px);
+    grid-template-rows: 0.5fr 1fr 1fr;
     gap: 30px;
-    //grid-template-areas:
-    //"type email name"
-    //"range range file"
-    //". submit .";
+    grid-template-areas:
+    "type email name"
+    "range range file"
+    ". submit .";
     @media (max-width: 1199px) {
+      margin-bottom: 20px;
       width: 100%;
       display: flex;
       flex-direction: column;

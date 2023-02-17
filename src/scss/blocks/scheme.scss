@@ -8,7 +8,14 @@
     @media (max-width: 1199px) {
       flex-direction: column;
     }
-    & .scheme__item:not(:last-child):after{
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    width: 209px;
+    position: relative;
+    &:not(:last-child):after{
       position: absolute;
       content: "";
       top: 50px;
@@ -20,13 +27,6 @@
         display: none;
       }
     }
-  }
-  &__item {
-    display: flex;
-    flex-direction: column;
-    align-items:center;
-    width: 209px;
-    position: relative;
   }
   &__icon {
     width: 100px;
